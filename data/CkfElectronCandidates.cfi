@@ -1,0 +1,65 @@
+#
+# This cfi should be included to run the CkfTrajectoryBuilder
+# and the CkfTrackCandidateMaker 
+#
+
+#
+# Looser chi2 estimator for electron trajectory building
+#   (definition should be moved?)
+#
+ es_module electronChi2 = Chi2MeasurementEstimatorESProducer
+  {
+    string ComponentName = "electronChi2"
+    double MaxChi2 = 100.
+    double nSigma = 3.
+  }
+#
+# "forward" and "backward" propagators for electrons
+#   (definition should be moved?)
+#
+  es_module fwdElectronPropagator = PropagatorWithMaterialESProducer {
+    string ComponentName = "fwdElectronPropagator"
+    string PropagationDirection = "alongMomentum"
+    double Mass = 0.000511
+  }
+  es_module bwdElectronPropagator = PropagatorWithMaterialESProducer {
+    string ComponentName = "bwdElectronPropagator"
+    string PropagationDirection = "oppositeToMomentum"
+    double Mass = 0.000511
+  }
+
+ module CkfElectronCandidates = CkfTrackCandidateMaker{
+	
+        string SeedProducer         = "globalPixelSeeds"
+	double ptCut                = 0.9
+	int32  maxCand              = 5
+        int32  maxLostHit           = 1	
+	int32  maxConsecLostHit     = 1
+	double lostHitPenalty       = 30.
+	bool   intermediateCleaning = true
+        int32  minimumNumberOfHits  = 5
+	bool   alwaysUseInvalidHits = true
+        bool   seedCleaning         = false
+	string TTRHBuilder          = "WithTrackAngle"
+	string propagatorAlong      = "fwdElectronPropagator"
+	string propagatorOpposite   = "bwdElectronPropagator"
+	string updator              = "KFUpdator"
+	string estimator            = "electronChi2"
+
+
+# nested parameter set for MeasurementTracker
+      PSet MeasurementTrackerParameters =
+      {
+         string PixelCPE = "PixelCPEfromTrackAngle"
+         string StripCPE = "StripCPEfromTrackAngle"
+         double NSigmaInside =3
+      }	
+
+# nested parameter set for TransientInitialStateEstimator
+      PSet TransientInitialStateEstimatorParameters =
+      {
+         string propagatorAlongTISE    = "fwdElectronPropagator"
+         string propagatorOppositeTISE = "bwdElectronPropagator"
+      }	
+
+ }
