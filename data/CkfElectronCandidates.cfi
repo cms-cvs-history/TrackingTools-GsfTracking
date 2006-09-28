@@ -21,11 +21,13 @@
     string ComponentName = "fwdElectronPropagator"
     string PropagationDirection = "alongMomentum"
     double Mass = 0.000511
+    double MaxDPhi              = 1.6
   }
   es_module bwdElectronPropagator = PropagatorWithMaterialESProducer {
     string ComponentName = "bwdElectronPropagator"
     string PropagationDirection = "oppositeToMomentum"
     double Mass = 0.000511
+    double MaxDPhi              = 1.6
   }
 
  module CkfElectronCandidates = CkfTrackCandidateMaker{
@@ -45,6 +47,7 @@
 	string propagatorOpposite   = "bwdElectronPropagator"
 	string updator              = "KFUpdator"
 	string estimator            = "electronChi2"
+    
 
 
 # nested parameter set for MeasurementTracker
