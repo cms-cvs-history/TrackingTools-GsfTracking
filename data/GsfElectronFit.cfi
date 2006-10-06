@@ -61,7 +61,7 @@ es_module GsfElectronFittingSmoother = KFFittingSmootherESProducer
   string Smoother = "GsfTrajectorySmoother"
 }
 
-module GsfElectrons = TrackProducer
+module GsfElectrons = GsfTrackProducer
 {
   string Fitter = "GsfElectronFittingSmoother"
   string Propagator = "fwdElectronPropagator"
