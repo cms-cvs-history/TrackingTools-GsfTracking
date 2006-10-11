@@ -35,5 +35,7 @@ include "RecoLocalTracker/SiPixelRecHits/data/PixelCPEParmError.cfi"
 #TransientTrackingBuilder
 include "RecoTracker/TransientTrackingRecHit/data/TransientTrackingRecHitBuilder.cfi"
 
+include "RecoTracker/CkfPattern/data/CkfTrackCandidates.cff"
+
 ############### generate CTF track candidates ############
 include "TrackingTools/GsfTracking/data/CkfElectronCandidates.cfi"
