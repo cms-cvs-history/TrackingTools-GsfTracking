@@ -26,6 +26,7 @@ es_module fwdAnalyticalPropagator = AnalyticalPropagatorESProducer
 {
   string ComponentName = "fwdAnalyticalPropagator"
   string PropagationDirection = "alongMomentum"
+  double MaxDPhi              = 1.6
 }
 
 
@@ -41,6 +42,7 @@ es_module bwdAnalyticalPropagator = AnalyticalPropagatorESProducer
 {
   string ComponentName = "bwdAnalyticalPropagator"
   string PropagationDirection = "oppositeToMomentum"
+  double MaxDPhi              = 1.6
 }
 
 es_module GsfTrajectorySmoother = GsfTrajectorySmootherESProducer

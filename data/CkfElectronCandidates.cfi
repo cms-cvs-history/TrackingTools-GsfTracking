@@ -20,46 +20,24 @@
   es_module fwdElectronPropagator = PropagatorWithMaterialESProducer {
     string ComponentName = "fwdElectronPropagator"
     string PropagationDirection = "alongMomentum"
+    double MaxDPhi = 1.6
     double Mass = 0.000511
   }
   es_module bwdElectronPropagator = PropagatorWithMaterialESProducer {
     string ComponentName = "bwdElectronPropagator"
     string PropagationDirection = "oppositeToMomentum"
+    double MaxDPhi = 1.6
     double Mass = 0.000511
   }
 
- module CkfElectronCandidates = CkfTrackCandidateMaker{
-	
-        string SeedProducer         = "globalPixelSeeds"
-	double ptCut                = 0.9
-	int32  maxCand              = 5
-        int32  maxLostHit           = 1	
-	int32  maxConsecLostHit     = 1
-	double lostHitPenalty       = 30.
-	bool   intermediateCleaning = true
-        int32  minimumNumberOfHits  = 5
-	bool   alwaysUseInvalidHits = true
-        bool   seedCleaning         = false
-	string TTRHBuilder          = "WithTrackAngle"
-	string propagatorAlong      = "fwdElectronPropagator"
-	string propagatorOpposite   = "bwdElectronPropagator"
-	string updator              = "KFUpdator"
-	string estimator            = "electronChi2"
+es_module CkfElectronTrajectoryBuilder =
+  CkfTrajectoryBuilder from "RecoTracker/CkfPattern/data/CkfTrajectoryBuilderESProducer.cfi"
+replace CkfElectronTrajectoryBuilder.ComponentName        = "CkfElectronTrajectoryBuilder"
+replace CkfElectronTrajectoryBuilder.propagatorAlong      = "fwdElectronPropagator"
+replace CkfElectronTrajectoryBuilder.propagatorOpposite   = "bwdElectronPropagator"
+replace CkfElectronTrajectoryBuilder.estimator            = "electronChi2"
 
+module CkfElectronCandidates =
+  ckfTrackCandidates from "RecoTracker/CkfPattern/data/CkfTrackCandidates.cfi"
+replace CkfElectronCandidates.TrajectoryBuilder    = "CkfElectronTrajectoryBuilder"
 
-# nested parameter set for MeasurementTracker
-      PSet MeasurementTrackerParameters =
-      {
-         string PixelCPE = "PixelCPEfromTrackAngle"
-         string StripCPE = "StripCPEfromTrackAngle"
-         double NSigmaInside =3
-      }	
-
-# nested parameter set for TransientInitialStateEstimator
-      PSet TransientInitialStateEstimatorParameters =
-      {
-         string propagatorAlongTISE    = "fwdElectronPropagator"
-         string propagatorOppositeTISE = "bwdElectronPropagator"
-      }	
-
- }
