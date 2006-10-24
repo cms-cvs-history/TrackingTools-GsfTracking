@@ -67,4 +67,5 @@ module GsfElectrons = GsfTrackProducer
   string Propagator = "fwdElectronPropagator"
   string src = "CkfElectronCandidates"
   string TTRHBuilder       =   "WithTrackAngle"
+  bool TrajectoryInEvent = false
 }
