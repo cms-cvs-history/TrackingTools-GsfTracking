@@ -28,4 +28,5 @@ module KfElectrons = TrackProducer
   string src = "CkfElectronCandidates"
   string TTRHBuilder       =   "WithTrackAngle"
   bool TrajectoryInEvent = false
+  string producer = ""
 }
