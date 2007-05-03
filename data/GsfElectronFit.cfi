@@ -59,6 +59,8 @@ es_module GsfElectronFittingSmoother = KFFittingSmootherESProducer
   string ComponentName = "GsfElectronFittingSmoother"
   string  Fitter = "GsfTrajectoryFitter"
   string Smoother = "GsfTrajectorySmoother"
+  double EstimateCut = -1
+  int32 MinNumberOfHits = 5
 }
 
 module GsfElectrons = GsfTrackProducer

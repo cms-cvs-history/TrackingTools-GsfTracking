@@ -19,6 +19,8 @@ es_module KFElectronFittingSmoother = KFFittingSmootherESProducer
   string ComponentName = "KFElectronFittingSmoother"
   string  Fitter = "KFElectronFitter"
   string Smoother = "KFElectronSmoother"
+  double EstimateCut = -1
+  int32 MinNumberOfHits = 5
 }
 
 module KfElectrons = TrackProducer
