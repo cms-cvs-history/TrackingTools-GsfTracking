@@ -38,4 +38,8 @@ include "RecoTracker/TransientTrackingRecHit/data/TransientTrackingRecHitBuilder
 include "RecoTracker/CkfPattern/data/CkfTrackCandidates.cff"
 
 ############### generate CTF track candidates ############
+include "TrackingTools/GsfTracking/data/CkfElectronCandidatesChi2.cfi"
+include "TrackingTools/GsfTracking/data/FwdElectronPropagator.cfi"
+include "TrackingTools/GsfTracking/data/BwdElectronPropagator.cfi"
+include "TrackingTools/GsfTracking/data/CkfElectronTrajectoryBuilder.cfi"
 include "TrackingTools/GsfTracking/data/CkfElectronCandidates.cfi"

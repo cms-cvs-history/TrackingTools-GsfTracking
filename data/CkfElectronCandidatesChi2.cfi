@@ -1,0 +1,10 @@
+#
+# Looser chi2 estimator for electron trajectory building
+#   (definition should be moved?)
+#
+ es_module electronChi2 = Chi2MeasurementEstimatorESProducer
+  {
+    string ComponentName = "electronChi2"
+    double MaxChi2 = 100.
+    double nSigma = 3.
+  }

@@ -1,0 +1,5 @@
+es_module KullbackLeiblerDistance = TSOSDistanceESProducer
+{
+  string ComponentName = "KullbackLeiblerDistance"
+  string DistanceMeasure = "KullbackLeibler"
+}

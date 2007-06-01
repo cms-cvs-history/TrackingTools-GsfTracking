@@ -1,0 +1,7 @@
+es_module GsfTrajectoryFitter = GsfTrajectoryFitterESProducer
+{
+  string ComponentName = "GsfTrajectoryFitter"
+  string MaterialEffectsUpdator = "ElectronMaterialEffects"
+  string GeometricalPropagator = "fwdAnalyticalPropagator"
+  string Merger = "CloseComponentsMerger"
+}

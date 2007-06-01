@@ -1,0 +1,9 @@
+#
+# "forward" propagator for electrons
+#
+  es_module fwdElectronPropagator = PropagatorWithMaterialESProducer {
+    string ComponentName = "fwdElectronPropagator"
+    string PropagationDirection = "alongMomentum"
+    double MaxDPhi = 1.6
+    double Mass = 0.000511
+  }

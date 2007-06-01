@@ -1,0 +1,6 @@
+es_module fwdAnalyticalPropagator = AnalyticalPropagatorESProducer 
+{
+  string ComponentName = "fwdAnalyticalPropagator"
+  string PropagationDirection = "alongMomentum"
+  double MaxDPhi              = 1.6
+}
