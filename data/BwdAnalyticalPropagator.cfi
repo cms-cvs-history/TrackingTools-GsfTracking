@@ -2,6 +2,6 @@
 # "backward" propagator for electrons
 #
   es_module bwdAnalyticalPropagator = 
-   fwdAnalyticalPropagator from "TrackingTools/GsfTracking/data/FwdAnalyticalPropagator
+   fwdAnalyticalPropagator from "TrackingTools/GsfTracking/data/FwdAnalyticalPropagator.cfi"
   replace bwdAnalyticalPropagator.ComponentName = "bwdAnalyticalPropagator"
   replace bwdAnalyticalPropagator.PropagationDirection = "oppositeToMomentum"
