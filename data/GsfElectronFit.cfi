@@ -6,4 +6,6 @@ module GsfElectrons = GsfTrackProducer
   string TTRHBuilder       =   "WithTrackAngle"
   bool TrajectoryInEvent = false
   string producer = ""
+  bool useHitsSplitting = false
+  
 }
