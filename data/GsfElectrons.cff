@@ -1,4 +1,4 @@
 include "TrackingTools/GsfTracking/data/CkfElectronCandidates.cff"
 include "TrackingTools/GsfTracking/data/GsfElectronFit.cff"
 
-sequence GsfGlobalElectronSequence = {CkfElectronCandidates,GsfElectrons}
+sequence GsfGlobalElectronTestSequence = {CkfElectronCandidates,GsfElectrons}
