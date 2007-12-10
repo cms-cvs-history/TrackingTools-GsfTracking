@@ -1,4 +1,4 @@
-module GsfElectrons = GsfTrackProducer
+module GsfGlobalElectronTest = GsfTrackProducer
 {
   string Fitter = "GsfElectronFittingSmoother"
   string Propagator = "fwdElectronPropagator"
