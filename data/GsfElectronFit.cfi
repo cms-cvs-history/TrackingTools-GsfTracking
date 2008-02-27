@@ -2,7 +2,7 @@ module GsfGlobalElectronTest = GsfTrackProducer
 {
   string Fitter = "GsfElectronFittingSmoother"
   string Propagator = "fwdElectronPropagator"
-  string src = "CkfElectronCandidates"
+  InputTag src = CkfElectronCandidates
   string TTRHBuilder       =   "WithTrackAngle"
   bool TrajectoryInEvent = false
   string producer = ""
