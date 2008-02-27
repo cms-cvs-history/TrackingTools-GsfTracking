@@ -7,5 +7,5 @@ module GsfGlobalElectronTest = GsfTrackProducer
   bool TrajectoryInEvent = false
   string producer = ""
   bool useHitsSplitting = false
-  
+  InputTag beamSpot = offlineBeamSpot  
 }
