@@ -1,9 +1,6 @@
-es_module GsfElectronFittingSmoother = KFFittingSmootherESProducer
-{
-  string ComponentName = "GsfElectronFittingSmoother"
-  string  Fitter = "GsfTrajectoryFitter"
-  string Smoother = "GsfTrajectorySmoother"
-  double EstimateCut = -1
-  int32 MinNumberOfHits = 5
-  bool RejectTracks = true
-}
+es_module GsfElectronFittingSmoother = KFFittingSmoother from "TrackingTools/TrackFitters/data/KFFittingSmootherESProducer.cfi"
+replace GsfElectronFittingSmoother.ComponentName = "GsfElectronFittingSmoother"
+replace GsfElectronFittingSmoother.Fitter = "GsfTrajectoryFitter"
+replace GsfElectronFittingSmoother.Smoother = "GsfTrajectorySmoother"
+
+
