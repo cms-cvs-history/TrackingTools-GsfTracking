@@ -1,6 +1,0 @@
-es_module CkfElectronTrajectoryBuilder =
-  CkfTrajectoryBuilder from "RecoTracker/CkfPattern/data/CkfTrajectoryBuilderESProducer.cfi"
-replace CkfElectronTrajectoryBuilder.ComponentName        = "CkfElectronTrajectoryBuilder"
-replace CkfElectronTrajectoryBuilder.propagatorAlong      = "fwdElectronPropagator"
-replace CkfElectronTrajectoryBuilder.propagatorOpposite   = "bwdElectronPropagator"
-replace CkfElectronTrajectoryBuilder.estimator            = "electronChi2"
