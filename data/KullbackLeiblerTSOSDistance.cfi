@@ -1,6 +1,0 @@
-es_module KullbackLeiblerDistance5D = DistanceBetweenComponentsESProducer5D
-{
-  string ComponentName = "KullbackLeiblerDistance5D"
-  string DistanceMeasure = "KullbackLeibler"
-}
- 

@@ -1,6 +1,0 @@
-es_module GsfElectronFittingSmoother = KFFittingSmoother from "TrackingTools/TrackFitters/data/KFFittingSmootherESProducer.cfi"
-replace GsfElectronFittingSmoother.ComponentName = "GsfElectronFittingSmoother"
-replace GsfElectronFittingSmoother.Fitter = "GsfTrajectoryFitter"
-replace GsfElectronFittingSmoother.Smoother = "GsfTrajectorySmoother"
-
-
