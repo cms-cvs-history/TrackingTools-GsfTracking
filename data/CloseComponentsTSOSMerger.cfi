@@ -1,7 +1,0 @@
-es_module CloseComponentsMerger5D = CloseComponentsMergerESProducer5D
-{
-  string ComponentName = "CloseComponentsMerger5D"
-  int32 MaxComponents = 12
-  string DistanceMeasure = "KullbackLeiblerDistance5D"
-}
- 
