@@ -1,4 +1,0 @@
-module CkfElectronCandidates =
-  ckfTrackCandidates from "RecoTracker/CkfPattern/data/CkfTrackCandidates.cfi"
-replace CkfElectronCandidates.TrajectoryBuilder    = "CkfElectronTrajectoryBuilder"
-

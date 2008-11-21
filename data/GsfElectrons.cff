@@ -1,5 +1,0 @@
-include "TrackingTools/GsfTracking/data/CkfElectronCandidates.cff"
-include "TrackingTools/GsfTracking/data/GsfElectronFit.cff"
-
-sequence GsfGlobalElectronTestSequence = {CkfElectronCandidates,GsfGlobalElectronTest}
- 

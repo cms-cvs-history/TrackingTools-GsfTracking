@@ -1,9 +1,0 @@
-es_module ElectronMaterialEffects = GsfMaterialEffectsESProducer 
-{
-  string ComponentName = "ElectronMaterialEffects"
-  double Mass = 0.000511
-  string MultipleScatteringUpdator = "MultipleScatteringUpdator"
-  string EnergyLossUpdator = "GsfBetheHeitlerUpdator"
-  string BetheHeitlerParametrization = "BetheHeitler_cdfmom_nC6_O5.par"
-  int32 BetheHeitlerCorrection = 2
-}
