@@ -1,8 +1,0 @@
-es_module GsfTrajectorySmoother = GsfTrajectorySmootherESProducer
-{
-  string ComponentName = "GsfTrajectorySmoother"
-  string MaterialEffectsUpdator = "ElectronMaterialEffects"
-  string GeometricalPropagator = "bwdAnalyticalPropagator"
-  string Merger = "CloseComponentsMerger5D"
-  double ErrorRescaling = 100.
-}
