@@ -1,0 +1,5 @@
+# <use name="TrackingTools/GsfMaterialEffectsUpdator">
+<use name="TrackingTools/AnalyticalJacobians">
+<use name=rootmath>
+<bin file=GsfMaterialEffectsUpdator_t.cpp></bin>
+<Flags CXXFLAGS="-O3 -msse4 -mfpmath=sse -ftree-vectorize">
